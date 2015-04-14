@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+	xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://www.springframework.org/schema/beans http://www.springframework.org/schema/beans/spring-beans.xsd">
+ 	
+ 	<!-- BMICalculator 객체 사용 -->
+	<bean id="bmiCalculator" class="di.bmiCalculator.BMICalculator">
+		<property name="lowWeight" value="18.5"/>
+		<property name="normal" value="23"/>
+		<property name="overWeight" value="25"/>
+		<property name="obesity" value="30"/>
+	</bean>
+	
+	<bean id="myInfo" class="di.bmiCalculator.MyInfo">
+		<property name="name" value="조병국"/>
+		<property name="height" value="174"/>
+		<property name="weight" value="72"/>
+		<property name="hobbys">
+			<list>
+				<value>장기</value>
+				<value>티비</value>
+				<value>독서</value>
+			</list>
+		</property>
+		<property name="bmiCalculator" ref="bmiCalculator"/>				
+	</bean>
+	
+	<!-- BMICalculator 두 번째 객체 사용 -->
+	<bean id="myInfo2" class="di.bmiCalculator.MyInfo">
+		<constructor-arg value="고양이"/>
+		<constructor-arg value="167"/>
+		<constructor-arg value="59"/>
+		<constructor-arg>
+			<list>
+				<value>걷기</value>
+				<value>울기</value>
+			</list>			
+		</constructor-arg>
+		<constructor-arg>
+			<ref bean="bmiCalculator"/>
+		</constructor-arg>		
+	</bean>
+	
+	<!-- di.pencil.Pencil6B 로 수정해서 테스트 해보세요 -->
+	<bean id="pencil" class="di.pencil.Pencil4B"/>
+	
+	<bean id="student1" class="di.student.Student">
+		<constructor-arg value="조병국"/>
+		<constructor-arg value="10"/>
+		<constructor-arg>
+			<list>
+				<value>장기</value>
+				<value>게임</value>
+			</list>
+		</constructor-arg>
+		
+		<property name="height" value="174"/>
+		<property name="weight">
+			<value>72</value>
+		</property>
+	</bean>
+	
+	<bean id="studentInfo" class="di.student.StudentInfo">
+		<property name="student">
+			<ref bean="student1"/>
+		</property>
+	</bean>
+	 	
+</beans>
