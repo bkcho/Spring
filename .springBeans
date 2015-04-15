@@ -9,6 +9,7 @@
 	<configs>
 		<config>src/main/resources/applicationCTX_javainxml.xml</config>
 		<config>src/main/resources/applicationCTX_lifeCycle.xml</config>
+		<config>src/main/resources/applicationCTX_setProperty.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>
