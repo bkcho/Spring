@@ -9,3 +9,5 @@ di.javaInXml / xml파일에 java 파일을 포함시키는 방법
  di.xmlInJava / java파일에 xml을 포함시켜 DI를 사용하는 방법
  di.lifeCycle / di 생명주기  ]
  di.lifeCycle2 / bean 초기화 및 소멸자 함수 추가.
+ di.usingFromExternFile / 외부파일을 이용한 설정
+ di.usingFromExternFile / 외부파일을 이용한 설정2

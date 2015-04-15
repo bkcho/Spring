@@ -65,5 +65,9 @@
 			<ref bean="student1"/>
 		</property>
 	</bean>
+	
+	<bean id="adminConnection" class="di.usingFromExternFile.AdminConnection"></bean>
+	 	
+	 	
 	 	
 </beans>
