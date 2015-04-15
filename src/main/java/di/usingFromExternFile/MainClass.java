@@ -24,17 +24,8 @@ public class MainClass {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		
-		GenericXmlApplicationContext gCtx = (GenericXmlApplicationContext)ctx;
-		gCtx.load("applicationCTX.xml");
-		gCtx.refresh();
-		
-		AdminConnection adminConnection = gCtx.getBean("adminConnection", AdminConnection.class);
-		System.out.println("admin ID: " + adminConnection.getAdminId());
-		System.out.println("admin PW: " + adminConnection.getAdminPw());
-		
-		gCtx.close();
+		}	
+
 		ctx.close();		
 	}
 }
