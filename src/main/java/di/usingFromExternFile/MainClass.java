@@ -24,8 +24,8 @@ public class MainClass {
 			
 		} catch (IOException e) {
 			e.printStackTrace();
-		}
-		
+		}	
+
 		GenericXmlApplicationContext gCtx = (GenericXmlApplicationContext)ctx;
 		gCtx.load("applicationCTX.xml");
 		gCtx.refresh();
