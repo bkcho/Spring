@@ -11,6 +11,7 @@
 		<config>src/main/resources/applicationCTX_lifeCycle.xml</config>
 		<config>src/main/resources/applicationCTX_setProperty.xml</config>
 		<config>src/main/resources/applicationCTX_aop.xml</config>
+		<config>src/main/resources/applicationCTX_aop2.xml</config>
 	</configs>
 	<autoconfigs>
 	</autoconfigs>

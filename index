@@ -14,5 +14,5 @@ di.usingFromExternFile / 외부파일을 이용한 설정2
 di.setProperty / Environment를 사용하지 않고 바로 xml을 이용하여  프로퍼티를 이용하는 방법
 di.setPropertyUsingJava / Environment를 사용하지 않고 바로 java 코드를 이용하여 사용하는 방법
 di.usingProfileInXml / 프로파일 속성을 이용한 설정 xml을 이용  ( 위에 xml이랑 java 명이 바뀜 )
-di.aop / aop(관점 지향형) 예제
- 
+aop.exam / aop(관점 지향형) 예제
+aop.exam2 / aop(관점 지향형) xml을 사용하지 않는고 @을 사용하는 예제 
