@@ -8,10 +8,32 @@
 	<bean id="logAop" class="aop.exam.LogAop"/>
 	
 	<aop:config>
+	
 		<aop:aspect id="logger" ref="logAop">
 			<aop:pointcut expression="within(aop.exam.*)" id="publicM"/>
 			<aop:around method="loggerAop" pointcut-ref="publicM"/>
 		</aop:aspect>
+
+		<aop:aspect id="logger" ref="logAop">
+			<aop:pointcut expression="within(aop.exam.*)" id="publicM"/>
+			<aop:around method="beforeAdvice" pointcut-ref="publicM"/>
+		</aop:aspect>
+
+		<aop:aspect id="logger" ref="logAop">
+			<aop:pointcut expression="within(aop.exam.*)" id="publicM"/>
+			<aop:around method="afterReturningAdvice" pointcut-ref="publicM"/>
+		</aop:aspect>
+
+		<aop:aspect id="logger" ref="logAop">
+			<aop:pointcut expression="within(aop.exam.*)" id="publicM"/>
+			<aop:around method="afterThrowingAdvice" pointcut-ref="publicM"/>
+		</aop:aspect>
+
+		<aop:aspect id="logger" ref="logAop">
+			<aop:pointcut expression="within(aop.exam.*)" id="publicM"/>
+			<aop:around method="afterAdvice" pointcut-ref="publicM"/>
+		</aop:aspect>		
+		
 	</aop:config>
 	
 	<bean id="student" class="aop.exam.Student">
